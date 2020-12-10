@@ -9,7 +9,12 @@ namespace ToDoList
     public static void Main()
     {
       Console.WriteLine("Welcome to the To Do List.");
-      Console.WriteLine("Would you like to add or view an item to your list? Type add or view");
+      Menu();
+    }
+
+    public static void Menu()
+    {
+      Console.WriteLine("Would you like to add or view an item to your list? Type add, view or done");
       string userInput = Console.ReadLine();
       if (userInput == "add")
       {
@@ -18,6 +23,10 @@ namespace ToDoList
         else if (userInput == "view")
       {
         ListAllItems();
+      }
+        else if (userInput == "done")
+      {
+        Console.WriteLine("Good Bye");
       }
     }     
       
@@ -38,6 +47,7 @@ namespace ToDoList
         {
           Console.WriteLine(addedItem.Description);
         }
+        Menu();
       }
     }
   }
