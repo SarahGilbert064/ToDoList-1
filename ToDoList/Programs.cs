@@ -32,8 +32,7 @@ namespace ToDoList
     public static void ListAllItems()
     {
       List<Item> fullList = Item.GetAll();
-      if (fullList.Count > 0)
-      {
+      { 
         Console.WriteLine("TO-DO list:");
         foreach (Item addedItem in fullList)
         {
